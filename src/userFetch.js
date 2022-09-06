@@ -7,7 +7,7 @@ const useFetch = (url) => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch()
+      fetch(url)
         .then(res => {
           if(!res.ok){
             throw Error('fetch failed')
