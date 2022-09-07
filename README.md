@@ -15,15 +15,14 @@ Personal BLOG + database in the JSON SERVER
 
 
 ## Usage example
-
-              To start the react app:
-``
+To start the react app:
+```sh
 npm run start
-``
-              To start the JSON server:
-``
+```
+To start the JSON server:
+```sh
 npx json-server --watch data/db.json --port 8000
-``
+```
 
 ## Development setup
 
