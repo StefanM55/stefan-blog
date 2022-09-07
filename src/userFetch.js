@@ -6,8 +6,10 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+const abortCont = new AbortController();
+
     setTimeout(() => {
-      fetch(url)
+      fetch(url, { signal: abortCont.signal })
         .then(res => {
           if(!res.ok){
             throw Error('fetch failed')
@@ -20,10 +22,15 @@ const useFetch = (url) => {
           setError(null);
         })
         .catch(err => {
+          if (err.name === 'AbortError'){
+            console.log('fetch aborted');
+          }
           setIsPending(false);
           setError(err.message);
         })
     }, 1000); //simulare incarcare de 1s cu setTimeout pentru vizionare mesaj Loading
+
+    return () => abortCont.signal;
   }, [url]);
 
   return { data, isPending, error };
