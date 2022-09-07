@@ -6,7 +6,7 @@ const Create = () => {
   const [body, setBody] = useState('');
   const [author, setAuthor] = useState('mario');
   const [isPending, setIsPending] = useState(false);
-  const history = useHistory();
+  const history = useHistory(); //function from react router 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ const Create = () => {
       console.log('new blog added');
       setIsPending(false);
       // history.go(-1);
-      history.push('/');
+      history.push('/'); //go to home
     })
 
 
