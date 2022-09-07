@@ -14,6 +14,19 @@ Personal BLOG + database in the JSON SERVER
 - 404 page for other then linked paths
 
 
+## Development setup
+
+To run the project you need 
+1.NPM already installed:
+```sh
+npm install
+```
+2.React router installed(I've chosen the 5th version as it is known to be stable):
+```sh
+npm install react-router-dom@5
+```
+
+
 ## Usage example
 To start the react app:
 ```sh
@@ -23,19 +36,6 @@ To start the JSON server:
 ```sh
 npx json-server --watch data/db.json --port 8000
 ```
-
-## Development setup
-
-To run the project you need 
-1.NPM already installed:
-``
-npm install
-``
-2.React router installed(I've chosen the 5th version as it is known to be stable):
-``
-npm install react-router-dom@5
-``
-
 
 
 ## Meta
